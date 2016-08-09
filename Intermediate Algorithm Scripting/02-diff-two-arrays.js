@@ -13,3 +13,5 @@ function diffArray(arr1, arr2) {
   
   return res;
 }
+
+diffArray([1, "calf", 3, "piglet"], [7, "filly"]);
