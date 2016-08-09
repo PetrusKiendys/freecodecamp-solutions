@@ -1,15 +1,15 @@
 // URL: https://www.freecodecamp.com/challenges/diff-two-arrays
 
 function diffArray(arr1, arr2) {
-  var res1 = arr1.filter(function(val, i, thisArr) {
-    return (arr2.indexOf(val) !== -1) ? false : true;
+  var res1 = arr1.filter(function(elem) {				// for each element in arr1
+    return (arr2.indexOf(elem) !== -1) ? false : true;	// only return the elements that are not present in arr2
   });
   
-  var res2 = arr2.filter(function(val, i, thisArr) {
-    return (arr1.indexOf(val) !== -1) ? false : true;
+  var res2 = arr2.filter(function(elem) {				// for each element in arr2
+    return (arr1.indexOf(elem) !== -1) ? false : true;	// only return the elements that are not present in arr1
   });
   
-  var res = res1.concat(res2);
+  var res = res1.concat(res2);							// combine the two resulting arrays together
   
   return res;
 }
